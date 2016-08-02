@@ -1,0 +1,64 @@
+String message = 'PROBABLEMENTE EL MEJOR SOFTWARE DE CONTABILIDAD EN EL MUNDO';
+       message += UserInfo.getOrganizationId().toUpperCase().substring(0,15);
+       Date endDate = Date.today();
+       String endDateString = String.valueOf(endDate.Year());
+       if (endDate.Month() < 10)
+       {
+           endDateString += '0' + endDate.Month();
+       }
+       else
+       {
+           endDateString += endDate.Month();
+       }
+       if (endDate.Day() < 10)
+       {
+           endDateString += '0' + endDate.Day();
+       }
+       else
+       {
+           endDateString += endDate.Day();
+       }
+       message += endDateString;
+       message += '4D6A698CEC58CA63E98EA63B8A740967';
+       Blob digest = Crypto.generateDigest('SHA', Blob.valueOf(message));
+       String key = EncodingUtil.convertToHex(digest) + endDateString;
+       User thisUser = [Select id from user where id = :UserInfo.getUserId()];
+       thisUser.c2g__SupportDataAccessKey__c = key;
+       update thisUser;
+//delete [Select id from c2g_codaTransaction__c];
+
+delete [Select id from c2g__codaInvoice__c];
+delete [Select id from c2g__codaInvoiceLineItem__c];
+delete [Select id from c2g__codaCreditNote__c];
+delete [Select id from c2g__codaCreditNoteLineItem__c];
+delete [Select id from c2g__codaTransaction__c];
+delete [Select id from c2g__codaTransactionLineItem__c];
+  
+delete [Select id from c2g__codaJournal__c];
+delete [Select id from c2g__codaJournalLineItem__c];
+
+ 
+delete [Select id from c2g__codaPurchaseInvoice__c];
+delete [Select id from c2g__codaPurchaseInvoiceExpenseLineItem__c];
+delete [Select id from c2g__codaPurchaseInvoiceLineItem__c];
+
+delete [Select id from c2g__codaPurchaseCreditNote__c];
+delete [Select id from c2g__codaPurchaseCreditNoteExpLineItem__c];
+delete [Select id from c2g__codaPurchaseCreditNoteLineItem__c];
+
+delete [Select id from c2g__codaPayment__c];
+delete [Select id from c2g__codaPaymentLineItem__c];
+delete [Select id from c2g__codaPaymentBatch__c];
+
+
+delete [Select id from c2g__codaCashEntry__c];
+delete [Select id from c2g__codaCashEntryLineItem__c];
+delete [Select id from c2g__codaCashMatchingHistory__c];
+
+delete [Select id from c2g__codaMatchingReference__c];
+
+
+
+  
+thisUser.c2g__SupportDataAccessKey__c = null;
+       update thisUser;
