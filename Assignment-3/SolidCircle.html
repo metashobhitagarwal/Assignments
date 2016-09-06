@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="300" height="300"></canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+	  
+      var centerX = canvas.width / 2;
+      var centerY = canvas.height / 2;
+      var radius = 100;
+
+      context.beginPath();
+      context.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+	  context.fillStyle ="rgb(46,148,209)";
+      context.fill();
+      
+    </script>
+  </body>
+</html>   
