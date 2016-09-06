@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" href="myStyle.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <title>Assignment 1</title>
+</head>
+
+<body>
+<section id="header">
+    <h4>Contact Us Today!</h4>
+</section>
+    <section id="contact-form">
+        <form method="post" action="index.html" >
+        <div class="line">
+            <div class="lab"><label>First Name</label></div>
+            <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                <input type="text"  placeholder="First Name" pattern="[a-zA-Z]{3,15}" required></div>
+
+
+            <div class="line">
+                <div class="lab"><label>Last Name</label></div>
+               <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                    <input type="text"  placeholder="Last Name" pattern="[a-zA-Z]{3,15}" required></div>
+
+
+            <div class="line">
+                <div class="lab"><label>E-mail</label></div>
+                <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                <input type="email"  placeholder="E-mail" pattern=".{5,50}" required></div>
+
+
+            <div class="line">
+                <div class="lab"><label>Phone #</label></div>
+                <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                <input type="text" placeholder="Phone" pattern="[0-9]{10}" required></div>
+				
+            <div class="line">
+                <div class="lab"><label>Address</label></div>
+                <span><i class="fa fa-home" aria-hidden="true"></i></span>
+                <input type="text" placeholder="Address"  pattern=".{10,200}" required></div>
+
+
+            <div class="line">
+                <div class="lab"><label>City</label></div>
+                <span><i class="fa fa-home" aria-hidden="true"></i></span>
+                <input type="text"  placeholder="City" pattern="[a-zA-Z]{2,20}" required></div>
+
+            <div class="line">
+                <div class="lab"><label>State</label></div>
+                <span><i class="fa fa-list" aria-hidden="true"></i></span>
+                <select>
+                    <option>Select Option</option>
+                    <option value="RAJ">Rajasthan</option>
+                    <option value="PUN">Punjab</option>
+                    <option value="GUJ">Gujarat</option>
+                    <option value="J&K">Jammu&amp;Kashmir</option>
+                    <option value="UP">Uttar Pradesh</option>
+                    <option value="DEL">Delhi</option>
+                    <option value="KAR">Karnataka</option>
+                    <option value="TAM">Tamil Nadu</option>
+                    <option value="WEB">West Bengal</option>
+                </select>
+                </div>
+
+
+            <div class="line">
+                <div class="lab"><label>Zip Code</label></div>
+                <span><i class="fa fa-home" aria-hidden="true"></i></span>
+                <input type="text"  placeholder="Zip Code" pattern="[0-9]{6}" required></div>
+
+            <div class="line">
+                <div class="lab"><label>WebSite or Domain Name</label></div>
+                <span><i class="fa fa-globe" aria-hidden="true"></i></span>
+                <input type="url" maxlength="200" placeholder="WebSite or Domain Name" required></div>
+
+            <div class="line">
+                <div class="lab"><label>Do you have hosting ?</label></div>
+                <input class="rb" type="radio" name="hosting" checked>Yes<br>
+                <input class="rb" type="radio" name="hosting">No
+            </div>
+
+
+
+            <div class="line">
+                <div class="lab"><label>Project Description</label></div>
+                <span><i class="fa fa-pencil" aria-hidden="true"></i></span>
+				
+                <textarea type="text-area"  placeholder="Project Description" pattern=".{10,200}" required></textarea></div>
+            <center><button type="submit">Send <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i></span></button>
+                </center> 	 	
+        </form>
+    </section>
+
+</body>
+</html>
