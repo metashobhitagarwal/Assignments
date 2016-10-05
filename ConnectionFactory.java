@@ -36,12 +36,7 @@ public class ConnectionFactory {
 			connection.close();
 		}
 		catch(Exception e){
-			try{
-				connection.close();
-			}
-			catch(Exception e2){
-				e2.printStackTrace();
-			}
+			e.printStackTrace();	
 		}
 	}
 }
