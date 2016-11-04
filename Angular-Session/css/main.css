@@ -1,0 +1,35 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.close {
+	opacity: 1.0;
+}
+
+.cardClose {
+	color: white;
+	font-weight:bold;
+	margin-right:5px;
+	position: relative;
+}
+
+.cardImage {
+	height:50px;
+	width:50px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+input {
+	margin-bottom: 15px;
+}
+
+#maker{
+	background: linear-gradient(135deg, #E91E63  9%, #9C27B0  59%, #673AB7  100%);
+	border: none;
+	font-weight: bold;
+	box-shadow: 2px 4px 9px 2px rgba(0, 0, 0, 0.21);
+	width: 200px;
+	padding: 15px;
+	border-radius: 10px;
+}
